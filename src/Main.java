@@ -1,12 +1,12 @@
+import java.util.Map;
+
 public class Main {
     public static void main(String[] args) {
 
-        Bankomat bank = new Bankomat(5000);
-        bank.getCash(50);//Выдано
-        bank.getCash(100);//Выдано
-        bank.getCash(500);//Выдано
-        bank.getCash(1000);//Выдано
-        bank.getCash(5000);//Не достаточно
+        Bankomat bank = new Bankomat(0, 5, 5, 5, 5);
+        Map<NominalValue, Integer> issued = bank.getCash(50);
+        System.out.println("Выдано: " + issued);
+
 
 
 
